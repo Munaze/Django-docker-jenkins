@@ -10,8 +10,8 @@ EXPOSE 8002
 
 RUN ["chmod", "+x", "manage.py"]
 
-RUN ./ manage.py migrate
+RUN  ["manage.py", "migrate"] 
 
-RUN ./ manage.py test testwebapp
+RUN  ["manage.py", "test", "testwebapp"]
 
-CMD ./ manage.py runserver 0.0.0.0:8002
+CMD  ["manage.py", "runserver", "0.0.0.0:8002"]
