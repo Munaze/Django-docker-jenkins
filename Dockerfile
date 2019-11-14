@@ -8,8 +8,8 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 8002
 
-RUN ./manage.py migrate
+RUN ./python manage.py migrate
 
-RUN ./manage.py test testwebapp
+RUN ./python manage.py test testwebapp
 
-CMD ./manage.py runserver 0.0.0.0:8002
+CMD ./python manage.py runserver 0.0.0.0:8002
