@@ -8,6 +8,8 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 8002
 
+RUN ["chmod", "+x", "manage.py"]
+
 RUN ./ manage.py migrate
 
 RUN ./ manage.py test testwebapp
