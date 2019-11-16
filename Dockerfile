@@ -1,8 +1,6 @@
 FROM python:3.7.3
 
-ADD . /var/www/sample-django-app
 
-WORKDIR /var/www/sample-django-app
 
 RUN pip3 install -r requirements.txt
 
